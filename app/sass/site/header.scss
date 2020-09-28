@@ -1,0 +1,113 @@
+.header {
+     padding: 22px 0;
+     background: $main-color;
+
+     &__wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-between;
+     }
+
+     &__social {
+          display: flex;
+     }
+
+     &__link {
+          display: block;
+          margin-right: 15px;
+     }
+
+     &__img {
+          stroke: #fff;
+          fill: #fff;
+          transition: fill .3s,
+               stroke .3s;
+     }
+
+     &__link:hover &__img {
+          stroke: $hover-color;
+          fill: $hover-color;
+     }
+
+     &__logo {
+          display: block;
+          @include font(700, 32px, 36px, $font-family);
+          letter-spacing: -0.01em;
+          color: $hover-color;
+     }
+
+     &__tel {
+          @include font(600, 16px, 27px, $font-family);
+          color: #FFFFFF;
+          transition: color .3s;
+     }
+
+     &__tel:hover {
+          color: $hover-color;
+     }
+
+     &__link--unvis {
+          display: none;
+     }
+}
+
+@media(max-width:624px) {
+     .header {
+
+          padding: 0;
+          background: none;
+
+          .container {
+               padding: 0;
+          }
+
+          &__wrapper {
+               display: flex;
+               flex-wrap: wrap;
+               align-items: center;
+               justify-content: center;
+          }
+
+          &__social {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               padding: 8px 0;
+               width: 100%;
+               background-color: $hover-color;
+          }
+
+          &__link {
+               display: block;
+               margin-right: 20px;
+          }
+
+          &__img {
+               stroke: $main-color;
+               fill: $main-color;
+          }
+
+          &__link:hover &__img {
+               stroke: $main-color;
+               fill: $main-color;
+          }
+
+          &__logo {
+               display: block;
+               width: 100%;
+               text-align: center;
+               padding: 16px 0;
+               background: $main-color;
+               @include font(700, 24px, 28px, $font-family);
+          }
+
+          &__tel {
+               display: none;
+          }
+
+          &__link--unvis {
+               display: block;
+          }
+     }
+}
