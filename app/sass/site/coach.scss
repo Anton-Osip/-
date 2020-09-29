@@ -1,0 +1,117 @@
+.coach {
+     padding: 51px 0 80px;
+
+     &__wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+     }
+
+     &__img {
+          width: 100%;
+          object-fit: cover;
+     }
+
+     &__img-block {
+          max-width: 575px;
+          height: auto;
+          margin-right: 65px;
+     }
+
+     &__info {
+          max-width: 520px;
+          color: #001A41;
+     }
+
+     &__title {
+          @include font(700, 40px, 44px, $font-family);
+          letter-spacing: -0.01em;
+          margin-bottom: 15px;
+     }
+
+     &__subtitle {
+          @include font(700, 10px, 13px, $font-family);
+          text-transform: uppercase;
+          margin-bottom: 15px;
+     }
+
+     &__text {
+          @include font(400, 16px, 27px, $font-family);
+          letter-spacing: -0.01em;
+     }
+}
+
+@media(max-width:1024px) {
+     .coach {
+          &__title {
+               @include font(700, 30px, 34px, $font-family);
+          }
+
+          &__subtitle {
+               @include font(700, 8px, 11px, $font-family);
+
+          }
+
+          &__text {
+               @include font(400, 10px, 21px, $font-family);
+          }
+     }
+}
+
+@media(max-width:892px) {
+     .coach {
+          padding-bottom: 64px;
+
+          .container {
+               padding-right: 0;
+               overflow: hidden;
+          }
+
+          &__wrapper {
+               flex-wrap: wrap;
+          }
+
+          &__img-block {
+               max-width: initial;
+               width: 100%;
+               margin-right: 0;
+               margin-bottom: 48px;
+          }
+
+          &__info {
+               max-width: initial;
+               width: 100%;
+               padding-right: 15px;
+          }
+
+          &__title {
+               @include font(700, 40px, 44px, $font-family);
+          }
+
+          &__subtitle {
+               @include font(700, 10px, 13px, $font-family);
+          }
+
+          &__text {
+               @include font(400, 16px, 27px, $font-family);
+          }
+     }
+}
+
+@media(max-width:4860px) {
+     .coach {
+          padding: 37px 0 50px;
+
+          &__img-block {
+               margin-bottom: 25px;
+          }
+
+          &__title {
+               @include font(700, 24px, 28px, $font-family);
+          }
+
+          &__text {
+               @include font(400, 14px, 24px, $font-family);
+          }
+     }
+}

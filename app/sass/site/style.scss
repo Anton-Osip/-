@@ -8,6 +8,10 @@ a {
     text-decoration: none;
 }
 
+button {
+    outline: none;
+}
+
 img {
     display: block;
 }
@@ -23,8 +27,15 @@ body {
     color: #000;
 }
 
-.container {
-    max-width: 1190px;
-    padding: 0 15px;
-    margin: 0 auto;
+.title {
+    margin-bottom: 40px;
+    @include font(700, 40px, 44px, $font-family);
+    letter-spacing: -0.01em;
+}
+
+@media(max-width:540px) {
+    .title {
+        margin-bottom: 25px;
+        @include font(700, 24px, 28px, $font-family);
+    }
 }

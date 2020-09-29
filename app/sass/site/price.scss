@@ -1,0 +1,126 @@
+.price {
+     color: #001A41;
+     padding: 80px 0;
+     background: #F2F2F2;
+
+     .container {
+          width: 1190px;
+     }
+
+     &__swiper {
+          position: relative;
+     }
+
+     &__wrapper {
+          display: flex;
+          align-items: stretch;
+     }
+
+     &__slide {
+          min-height: 473px;
+          background-color: #fff;
+          padding: 30px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+     }
+
+     &__slide-title {
+          @include font(700, 20px, 26px, $font-family);
+          letter-spacing: -0.01em;
+     }
+
+     &__slide-list {
+          list-style: none;
+     }
+
+     &__slide-item {
+          @include font(400, 14px, 20px, $font-family);
+          letter-spacing: -0.01em;
+          margin-bottom: 10px;
+          min-width: 260px;
+     }
+
+     &__slide-item:last-child {
+          margin-bottom: 0;
+     }
+
+     &__slide-cost {
+          @include font(800, 32px, 36px, $font-family);
+          letter-spacing: -0.01em;
+     }
+
+     &__slide-btn {
+          padding: 18px 59px;
+          border-radius: 25px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          @include font(600, 14px, 14px, $font-family);
+          background: $hover-color;
+          transition: background .3s,
+               transform .3s;
+     }
+
+     &__slide-btn:hover {
+          background: #29D6E6;
+     }
+
+     &__slide-btn:active {
+          transform: scale(0.9);
+     }
+
+     &__swiper-button-prev,
+     &__swiper-button-next {
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          border: 1px solid $hover-color;
+          background-color: #fff;
+          top: 50%;
+          z-index: 900;
+          border-radius: 50%;
+          outline: none;
+          cursor: pointer;
+          transition: background-color .3s;
+     }
+
+     &__swiper-button-prev:hover,
+     &__swiper-button-next:hover {
+          background-color: $hover-color;
+     }
+
+     &__swiper-button-prev {
+          left: 12px;
+          transform: translateX(-50%);
+     }
+
+     &__swiper-button-next {
+          right: 12px;
+          transform: translateX(50%);
+     }
+
+     &__swiper-button-prev:after {
+          content: '<';
+     }
+
+     &__swiper-button-next:after {
+          content: '>';
+     }
+
+     &__swiper-button-prev:after,
+     &__swiper-button-next:after {
+          width: 100%;
+          height: 100%;
+          @include font(400, 20px, 20px, $font-family);
+     }
+}
+
+@media(max-width:1200px) {
+
+     &__swiper-button-prev,
+     &__swiper-button-next {
+          display: none;
+     }
+}
