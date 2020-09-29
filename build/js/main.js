@@ -3,12 +3,19 @@ var priceSlider = new Swiper('.price__swiper', {
      direction: 'horizontal',
      loop: true,
      slidesPerView: 4,
-     spaceBetween: 40,
 
      // Navigation arrows
      navigation: {
           nextEl: '.price__swiper-button-prev',
           prevEl: '.price__swiper-button-next',
      },
+     breakpoints: {
+          500: {
+               spaceBetween: 40,
+          },
+          320: {
+               spaceBetween: 15,
+          }
+     }
 
 })
