@@ -1,0 +1,191 @@
+.footer {
+     background: #001A41;
+     padding: 85px 0 80px;
+
+     .container {
+          max-width: 838px;
+     }
+
+     &__contacts {
+          margin-bottom: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+     }
+
+     &__logo {
+          color: $hover-color;
+          @include font(700, 24px, 28px, $font-family);
+          letter-spacing: -0.01em;
+     }
+
+     &__tel {
+          @include font(600, 12px, 27px, $font-family);
+          color: #fff;
+     }
+
+     &__tel:hover {
+          color: $hover-color;
+     }
+
+     &__social {
+          display: flex;
+          justify-content: center;
+     }
+
+     &__link {
+          display: block;
+          margin-right: 15px;
+     }
+
+     &__img {
+          stroke: #fff;
+          fill: #fff;
+          transition: fill .3s,
+               stroke .3s;
+     }
+
+     &__link:hover &__img {
+          stroke: $hover-color;
+          fill: $hover-color;
+     }
+
+     &__mail {
+          color: #FFFFFF;
+          @include font(600, 16px, 27px, $font-family);
+     }
+
+     &__mail:hover {
+          color: $hover-color;
+     }
+
+     &__cop {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+     }
+
+     &__left {
+          display: flex;
+          align-items: center;
+     }
+
+     &__copper {
+          @include font(400, 12px, 18px, $font-family);
+          letter-spacing: 0.01em;
+          color: #FFFFFF;
+          opacity: 0.5;
+          margin-right: 30px;
+     }
+
+     &__sub-cop {
+          @include font(400, 12px, 18px, $font-family);
+          letter-spacing: 0.01em;
+          color: #FFFFFF;
+          opacity: 0.5;
+     }
+
+     &__right {
+          display: flex;
+          align-items: center;
+     }
+
+     &__right-text {
+          margin-right: 8px;
+          @include font(400, 12px, 18px, $font-family);
+          letter-spacing: 0.01em;
+          color: #FFFFFF;
+          opacity: 0.5;
+     }
+
+     &__img-logo {
+          fill: #FFFFFF;
+          opacity: 0.5;
+          width: 50px;
+          height: 16px;
+     }
+
+     &__copper-invis {
+          display: none;
+     }
+}
+
+@media(max-width:689px) {
+     .footer {
+          padding: 50px 0;
+
+          .container {
+               max-width: 240px;
+          }
+
+          &__contacts {
+               margin-bottom: 15px;
+               flex-direction: column;
+               align-items: center;
+          }
+
+          &__logo {
+               @include font(700, 22px, 28px, $font-family);
+               width: 100%;
+               text-align: center;
+               padding-bottom: 15px;
+               border-bottom: 1px solid $hover-color;
+               margin-bottom: 15px;
+               order: 1;
+          }
+
+          &__tel {
+               @include font(600, 14px, 24px, $font-family);
+               margin-bottom: 5px;
+               order: 2;
+          }
+
+          &__social {
+               width: 100%;
+               text-align: center;
+               padding-bottom: 15px;
+               border-bottom: 1px solid $hover-color;
+               margin-bottom: 15px;
+               order: 4;
+          }
+
+          &__mail {
+               display: block;
+               color: #FFFFFF;
+               @include font(600, 14px, 24px, $font-family);
+               width: 100%;
+               text-align: center;
+               padding-bottom: 15px;
+               border-bottom: 1px solid $hover-color;
+               margin-bottom: 15px;
+               order: 3;
+          }
+
+          &__cop {
+               flex-direction: column;
+          }
+
+          &__left {
+               flex-direction: column;
+
+          }
+
+          &__copper {
+               display: none;
+          }
+
+          &__sub-cop {
+               order: 1;
+               margin-bottom: 10px;
+          }
+
+          &__copper-invis {
+               display: block;
+               @include font(400, 12px, 18px, $font-family);
+               letter-spacing: 0.01em;
+               color: #FFFFFF;
+               opacity: 0.5;
+               margin-top: 30px;
+          }
+     }
+}
