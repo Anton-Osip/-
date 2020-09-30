@@ -36,7 +36,7 @@ $container-width:1190px;
     }
 }
 
-@media(min-width:768px) {
+@media(min-width:778px) {
     @for $i from 1 through $columns {
         .col-md-#{$i} {
             width: (100 / ($columns / $i)) * 1%;

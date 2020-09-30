@@ -41,3 +41,19 @@ var mySwiper = new Swiper('.comments__container', {
      },
 
 })
+var mySwiper = new Swiper('.photo__container', {
+     // Optional parameters
+     direction: 'horizontal',
+     loop: true,
+     spaceBetween: 0,
+
+
+     // If we need pagination
+     pagination: {
+          clickable: true,
+          type: 'bullets',
+          el: '.photo__pagination',
+     },
+
+
+})

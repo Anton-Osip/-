@@ -36,7 +36,7 @@
           padding: 18px 30px;
           background: $hover-color;
           border-radius: 25px;
-          color: #001A41;
+          color: $main-color;
           @include font(600, 14px, 14px, $font-family);
           border: none;
           outline: none;

@@ -1,0 +1,225 @@
+.inputs {
+     padding: 80px 0 81px;
+
+     &__wripper {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+     }
+
+     &__info {
+          max-width: 520px;
+     }
+
+     &__title {
+          @include font(700, 40px, 44px, $font-family);
+          margin-bottom: 15px;
+     }
+
+     &__subtitle {
+          @include font(400, 20px, 26px, $font-family);
+          margin-bottom: 40px;
+     }
+
+     &__list {
+          list-style: none;
+          counter-reset: item;
+     }
+
+     &__item {
+          display: flex;
+          align-items: center;
+          @include font(400, 20px, 30px, $font-family);
+          letter-spacing: -0.02em;
+          color: #001A41;
+          margin-bottom: 30px;
+     }
+
+     &__item:last-child {
+          margin-bottom: 0px;
+     }
+
+     &__num::before {
+          display: block;
+          margin-right: 20px;
+          counter-increment: item;
+          content: counter(item);
+          width: 80px;
+          height: 80px;
+          border: 2px solid #001A41;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include font(700, 48px, 54px, $font-family);
+          color: #001A41;
+
+     }
+
+     &__form {
+          display: flex;
+          flex-direction: column;
+          max-width: 520px;
+     }
+
+     &__input {
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          border-bottom: 1px solid rgba(#001A41, 0.25);
+          height: 58px;
+          outline: none;
+          margin-bottom: 15px;
+          @include font(400, 16px, 27px, $font-family);
+          color: #001A41;
+     }
+
+     &__input::placeholder {
+          @include font(400, 16px, 27px, $font-family);
+          color: #001A41;
+          opacity: 0.75;
+          transition: opacity .3s;
+     }
+
+     &__input:focus::placeholder {
+          opacity: 0;
+     }
+
+     &__block {
+          position: relative;
+     }
+
+     &__about {
+          height: 128px;
+          width: 100%;
+          padding-top: 50px;
+          resize: none;
+     }
+
+     &__about::placeholder {
+          @include font(400, 12px, 18px, $font-family);
+
+     }
+
+     &__about:focus+&__about-text {
+          transform: translateY(-35px);
+     }
+
+     &__about-text {
+          position: absolute;
+          left: 0;
+          top: 16px;
+          color: #001A41;
+          @include font(400, 16px, 27px, $font-family);
+          transition: transform .3s;
+     }
+
+     &__lable {
+          margin: 30px 0;
+          display: flex;
+          align-items: center;
+     }
+
+     &__lable-checkbox {
+          display: none;
+     }
+
+
+     &__lable--underline {
+          text-decoration: underline;
+     }
+
+     &__lable-fake {
+          display: block;
+          width: 24px;
+          height: 24px;
+          margin-right: 12px;
+          position: relative;
+          background: url(../../img/border.png)no-repeat center center;
+     }
+
+     &__lable-fake::before {
+          position: absolute;
+          content: '';
+          display: block;
+          width: 24px;
+          height: 24px;
+     }
+
+     &__lable-checkbox:checked+&__lable-fake {
+          background: none;
+     }
+
+     &__lable-checkbox:checked+&__lable-fake::before {
+          background: url(../../img/check-square.png)no-repeat center center;
+     }
+
+     &__lable-btn {
+          color: #001A41;
+          @include font(600, 14px, 14px, $font-family);
+          width: 100%;
+          padding: 18px 0;
+          background: $hover-color;
+          border-radius: 25px;
+          outline: none;
+          border: none;
+          transition: background .3s,
+               transform .3s;
+     }
+
+     &__lable-btn:hover {
+          background: #29D6E6;
+     }
+
+     &__lable-btn:active {
+          transform: scale(0.9);
+     }
+}
+
+@media (max-width:960px) {
+     .inputs {
+          padding: 64px 0;
+
+          &__wripper {
+               flex-direction: column;
+          }
+
+          &__info {
+               margin-bottom: 40px;
+          }
+     }
+}
+
+@media (max-width:375px) {
+     .inputs {
+          padding: 50px 0;
+
+          &__title {
+               @include font(700, 24px, 28px, $font-family);
+          }
+
+          &__subtitle {
+               @include font(400, 16px, 22px, $font-family);
+               margin-bottom: 25px;
+          }
+
+          &__item {
+               @include font(400, 16px, 22px, $font-family);
+          }
+
+          &__num::before {
+               margin-right: 15px;
+               width: 60px;
+               height: 60px;
+               @include font(700, 40px, 44px, $font-family);
+          }
+
+          &__info {
+               margin-bottom: 50px;
+          }
+
+          &__lable-fake {
+               width: 27px;
+          }
+     }
+}
