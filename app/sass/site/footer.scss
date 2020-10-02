@@ -10,18 +10,24 @@
           margin-bottom: 40px;
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: center;
      }
 
      &__logo {
           color: $hover-color;
           @include font(700, 24px, 28px, $font-family);
           letter-spacing: -0.01em;
+          width: 170px;
+          border-right: 1px solid $hover-color;
      }
 
      &__tel {
           @include font(600, 12px, 27px, $font-family);
           color: #fff;
+          width: 232px;
+          text-align: center;
+          border-right: 1px solid $hover-color;
+
      }
 
      &__tel:hover {
@@ -31,6 +37,8 @@
      &__social {
           display: flex;
           justify-content: center;
+          width: 200px;
+          border-right: 1px solid $hover-color;
      }
 
      &__link {
@@ -53,6 +61,8 @@
      &__mail {
           color: #FFFFFF;
           @include font(600, 16px, 27px, $font-family);
+          width: 230px;
+          text-align: right;
      }
 
      &__mail:hover {
@@ -107,6 +117,19 @@
 
      &__copper-invis {
           display: none;
+     }
+}
+
+@media(max-width:756px) {
+     .footer {
+
+          &__logo,
+          &__tel,
+          &__social,
+          &__mail {
+               border-right: none;
+               width: 100%;
+          }
      }
 }
 
