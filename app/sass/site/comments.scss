@@ -74,16 +74,17 @@
      &__button-prev,
      &__button-next {
           position: absolute;
+          color: $hover-color;
           width: 50px;
           height: 50px;
-          border: 1px solid $hover-color;
+          border: 2px solid $hover-color;
           background-color: transparent;
           top: 50%;
           z-index: 900;
           border-radius: 50%;
           outline: none;
           cursor: pointer;
-          transition: background-color .3s;
+          transition: background-color .3s, color .3s;
           transform: translateY(-50%);
           display: flex;
           align-items: center;
@@ -93,6 +94,7 @@
      &__button-prev:hover,
      &__button-next:hover {
           background-color: $hover-color;
+          color: $main-color;
      }
 
      &__button-prev {
@@ -119,6 +121,11 @@
                margin: 0 4px;
                outline: none;
                opacity: 1;
+               transition: border-color .3s;
+          }
+
+          .swiper-pagination-bullet:hover {
+               border-color: $hover-color;
           }
 
           .swiper-pagination-bullet-active {
